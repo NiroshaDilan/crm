@@ -42,7 +42,8 @@ const ngWizardConfig: NgWizardConfig = {
         OpenTicketComponent
     ],
     exports: [
-        TicketsComponent
+        TicketsComponent,
+        OpenTicketComponent
     ],
   imports: [
     CommonModule,

@@ -5,51 +5,97 @@
     <span class="page-title-icon bg-gradient-primary text-white mr-2">
       <i class="mdi mdi-home"></i>
     </span>
-    Dashboard
+    HOME
   </h3>
-  <nav aria-label="breadcrumb">
-    <ul class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">
-        <span></span>Overview
-        <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
-      </li>
-    </ul>
-  </nav>
+  <div>
+    <button type="button"
+            class="btn btn-sm btn-primary btn-fw">
+      ADD ACTIVE TILES
+    </button>
+
+    <button type="button"
+            class="btn btn-sm btn-primary btn-fw">
+      ADD TAB
+    </button>
+  </div>
 </div>
 <div class="row">
-  <div class="col-md-4 stretch-card grid-margin">
-    <div class="card bg-gradient-danger card-img-holder text-white">
-      <div class="card-body">
-        <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image"/>
-        <h4 class="font-weight-normal mb-3">Weekly Sales
-          <i class="mdi mdi-chart-line mdi-24px float-right"></i>
-        </h4>
-        <h2 class="mb-5">$ 15,0000</h2>
-        <h6 class="card-text">Increased by 60%</h6>
+  <div class="col-md-6 stretch-card grid-margin pr-1">
+    <div class="card">
+      <div class="card-header tickets-card-header">
+        <div class="row float-left">
+          <fa-stack class="ml-2">
+            <fa-icon [icon]="square"
+                     stackItemSize="2x"
+                     class="ticket-square"></fa-icon>
+            <fa-icon [icon]="cubes"
+                     [inverse]="true"
+                     stackItemSize="1x"></fa-icon>
+          </fa-stack>
+          <p class="card-title ml-2">MY OPEN TICKETS</p>
+        </div>
+
+        <div class="row float-right">
+          <i class="mdi mdi-lead-pencil" style="line-height: 4px;"></i>
+          <fa-icon [icon]="redoAlt"></fa-icon>
+        </div>
+      </div>
+
+      <div class="card-body" style="padding: 20px;">
+        <app-open-ticket></app-open-ticket>
       </div>
     </div>
   </div>
-  <div class="col-md-4 stretch-card grid-margin">
-    <div class="card bg-gradient-info card-img-holder text-white">
-      <div class="card-body">
-        <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image"/>
-        <h4 class="font-weight-normal mb-3">Weekly Orders
-          <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
-        </h4>
-        <h2 class="mb-5">45,6334</h2>
-        <h6 class="card-text">Decreased by 10%</h6>
+  <div class="col-md-6 stretch-card grid-margin pl-1">
+    <div class="card">
+      <div class="card-header tasks-card-header">
+        <div class="row float-left">
+          <fa-stack class="ml-2">
+            <fa-icon [icon]="square"
+                     stackItemSize="2x"
+                     class="ticket-square"></fa-icon>
+            <fa-icon [icon]="cubes"
+                     [inverse]="true"
+                     stackItemSize="1x"></fa-icon>
+          </fa-stack>
+          <p class="card-title ml-2">MY OPEN TASKS</p>
+        </div>
+
+        <div class="row float-right">
+          <button type="button"
+                  class="btn btn-sm btn-primary btn-fw" style="padding: 0;">
+            EDIT
+          </button>
+          <div ngbDropdown style="margin-right: 10px;">
+            <button class="btn btn-sm btn-primary"
+                    type="button" id="dropdownMenuIconButton6"
+                    ngbDropdownToggle>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownMenuIconButton6">
+              <a class="dropdown-item">DUPLICATE</a>
+              <a class="dropdown-item">DELETE</a>
+              <a class="dropdown-item">FIND DUPLICATES</a>
+              <a class="dropdown-item">CREATE TICKET</a>
+              <a class="dropdown-item">VIEW CHANNEL LOG</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="col-md-4 stretch-card grid-margin">
-    <div class="card bg-gradient-success card-img-holder text-white">
-      <div class="card-body">
-        <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image"/>
-        <h4 class="font-weight-normal mb-3">Visitors Online
-          <i class="mdi mdi-diamond mdi-24px float-right"></i>
-        </h4>
-        <h2 class="mb-5">95,5741</h2>
-        <h6 class="card-text">Increased by 5%</h6>
+
+      <div class="card-body" style="padding: 20px;">
+
+        <div class="row">
+          <div class="col-md-4">
+            <h6><strong>Priority:</strong> Medium</h6>
+          </div>
+          <div class="col-md-4">
+            <h6><strong>Priority:</strong> Complaint</h6>
+          </div>
+          <div class="col-md-4">
+            <h6><strong>Priority:</strong> Reopen</h6>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

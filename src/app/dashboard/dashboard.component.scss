@@ -1,5 +1,37 @@
 @import '../../styles.scss';
 
+.ticket-square {
+  color: #2ae15e;
+  border-radius: 5px;
+}
+
+.tickets-card-header {
+  border-top:1px solid #2ae15e;
+  background:white;
+}
+
+.tasks-card-header {
+  border-top:1px solid #eb042d;
+  background:white;
+}
+
+.card-header p {
+  margin-top: 5px !important;
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: #534D64 !important;
+}
+
+.grid-margin {
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  height: 474px;
+  overflow: auto;
+  padding-top: 5px !important;
+}
+
 .rounded-legend {
   ul {
     padding-left: 0;
