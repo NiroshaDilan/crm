@@ -1,0 +1,256 @@
+<div class="page-header">
+  <h3 class="page-title">
+    Customers
+  </h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:">Customers</a></li>
+      <li class="breadcrumb-item active" aria-current="page">View Customers</li>
+    </ol>
+  </nav>
+</div>
+
+<div class="col-lg-12 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <!--        <h4 class="card-title">Customers</h4>-->
+      <p class="card-description">
+        <!--          Add class <code>.table-striped</code>-->
+      </p>
+      <!--        <hr/>-->
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text"
+                     class="form-control"
+                     placeholder="NIC Number"
+                     aria-label="NIC Number">
+              <div class="input-group-append">
+                <button class="btn btn-sm btn-gradient-primary"
+                        type="button">
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <button type="button"
+                  class="btn btn-sm btn-primary btn-fw">
+            CREATE TICKET
+          </button>
+        </div>
+      </div>
+
+      <hr/>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>
+              Action
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              NIC/Passport/BR No.
+            </th>
+            <th>
+              Status
+            </th>
+            <th>
+              Date of Birth
+            </th>
+            <th>
+              Phone Fax
+            </th>
+            <th>
+              Other Phone
+            </th>
+            <th>
+              NIC Number
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let customer of customerArray">
+            <td class="action-td">
+              <!--                <div class="form-check form-check-flat form-check-primary">-->
+              <!--                  <label class="form-check-label">-->
+              <!--                    <input type="checkbox" class="form-check-flat form-check-primary form-check-input">-->
+              <!--                    <i class="input-helper"></i>-->
+              <!--                  </label>-->
+
+              <!--                </div>-->
+              <i class="mdi mdi-eye" (click)="openModal(customer.nicOrPassport)"></i>
+            </td>
+            <td>
+              {{customer.fullName}}
+            </td>
+            <td>
+              {{customer.nicOrPassport}}
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+              {{customer.nicOrPassport}}
+            </td>
+          </tr>
+          <tr>
+            <td class="action-td">
+              <i class="mdi mdi-eye" (click)="openModal('hh')"></i>
+            </td>
+            <td>
+              Messsy Adam
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+              July 1, 2015
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+          </tr>
+<!--          <tr>-->
+<!--            <td class="action-td">-->
+<!--              <i class="mdi mdi-eye"></i>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--              John Richards-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+<!--              Apr 12, 2015-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td class="action-td">-->
+<!--              &lt;!&ndash;                <img src="assets/images/faces/face4.jpg" alt="image"/>&ndash;&gt;-->
+<!--              <i class="mdi mdi-eye"></i>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--              Peter Meggik-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+<!--              May 15, 2015-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td class="action-td">-->
+<!--              &lt;!&ndash;                <img src="assets/images/faces/face5.jpg" alt="image"/>&ndash;&gt;-->
+<!--              <i class="mdi mdi-eye"></i>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--              Edward-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+<!--              May 03, 2015-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <td class="action-td">-->
+<!--              <i class="mdi mdi-eye"></i>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--              John Doe-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+<!--              April 05, 2015-->
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--            <td>-->
+
+<!--            </td>-->
+<!--          </tr>-->
+          </tbody>
+        </table>
+      </div>
+      <br/>
+      <ngb-pagination [collectionSize]="40"
+                      [pageSize]="10"
+                      [page]="1"
+                      aria-label="Default pagination"
+                      class="d-flex justify-content-end pagination-primary">
+      </ngb-pagination>
+    </div>
+  </div>
+</div>

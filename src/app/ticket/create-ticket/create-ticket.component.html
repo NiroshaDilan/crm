@@ -1,0 +1,287 @@
+<div class="col-lg-12 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-header">
+      <span>
+        <button type="button"
+                class="btn btn-sm btn-primary btn-fw">
+            SAVE
+        </button>
+
+        <button type="button"
+                class="btn btn-sm btn-primary btn-fw">
+            CANCEL
+        </button>
+      </span>
+    </div>
+    <div class="card-body">
+
+      <div class="card">
+        <div class="card-header">
+          <span>
+            OVERVIEW
+          </span>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="ticketForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Assignment Overrule:</label>
+                  <div class="col-sm-9">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        <i class="input-helper"></i>
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Assigned To:</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">First Call Resolution:</label>
+                  <div class="col-sm-9">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        <i class="input-helper"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Source:</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Type:</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                      <option>Category1</option>
+                      <option>Category2</option>
+                      <option>Category3</option>
+                      <option>Category4</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Category</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Product Services:</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Nature:</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Status:</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Priority</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                      <option>High</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Subject:</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Suggestions:</label>
+                  <div class="col-sm-9">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Non Customer:</label>
+                  <div class="col-sm-9">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        <i class="input-helper"></i>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label">Customer:</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control"/>
+                  </div>
+
+                  <span class="float-right">
+                    <button type="button" class="btn btn-primary btn-icon" style="height: 34px;">
+                      <i class="mdi mdi-cursor-default"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-icon" style="height: 34px;">
+                      <i class="mdi mdi-close"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Account No:</label>
+                  <div class="col-sm-9">
+                    <select class="form-control">
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Description:</label>
+                  <div class="col-sm-9">
+                    <tinymce></tinymce>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label">Resolution:</label>
+                  <div class="col-md-9">
+                    <textarea rows="5" style="width: 100%"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Additional Comments:</label>
+                  <div class="col-sm-9">
+                    <textarea rows="5" style="width: 100%"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label">Accounts:</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control"/>
+                  </div>
+
+                  <span class="float-right">
+                    <button type="button" class="btn btn-primary btn-icon" style="height: 34px;">
+                      <i class="mdi mdi-cursor-default"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-icon" style="height: 34px;">
+                      <i class="mdi mdi-close"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label">Assigned User:</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control"/>
+                  </div>
+
+                  <span class="float-right">
+                    <button type="button" class="btn btn-primary btn-icon" style="height: 34px;">
+                      <i class="mdi mdi-cursor-default"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary btn-icon" style="height: 34px;">
+                      <i class="mdi mdi-close"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div class="card-footer">
+      <span>
+        <button type="button"
+                class="btn btn-sm btn-primary btn-fw">
+            SAVE
+        </button>
+
+        <button type="button"
+                class="btn btn-sm btn-primary btn-fw">
+            CANCEL
+        </button>
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,351 @@
+<!--<ng-template class="modal fade" #exampleModalContent let-modal>-->
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Customer 360</h5>
+    <button type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+            (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row" id="proBanner">
+    </div>
+    <div class="row">
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header profile-card-header">
+
+            <div class="row">
+              <fa-stack class="ml-2">
+                <fa-icon [icon]="square"
+                         stackItemSize="2x"
+                         class="profile-square"></fa-icon>
+                <fa-icon [icon]="suitcase"
+                         [inverse]="true"
+                         stackItemSize="1x"></fa-icon>
+              </fa-stack>
+              <p class="card-title ml-2">
+                CUSTOMER PROFILE
+              </p>
+            </div>
+
+          </div>
+          <div class="card-body">
+            <app-customer-profile [nicNumber]="fromParent"></app-customer-profile>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 grid-margin">
+        <div class="row">
+          <div class="col-md-6 grid-margin">
+            <div class="card">
+              <div class="card-header ticket-card-header">
+                <div class="row">
+                  <fa-stack class="ml-2">
+                    <fa-icon [icon]="square"
+                             stackItemSize="2x"
+                             class="ticket-square"></fa-icon>
+                    <fa-icon [icon]="bookOpen"
+                             [inverse]="true"
+                             stackItemSize="1x"></fa-icon>
+                  </fa-stack>
+                  <p class="card-title ml-2">TICKETS(0)</p>
+                </div>
+              </div>
+              <div class="card-body pr-2 pl-2">
+                <app-tickets></app-tickets>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 grid-margin">
+            <div class="card">
+              <div class="card-header oppo-card-header">
+                <div class="row">
+                  <fa-stack class="ml-2">
+                    <fa-icon [icon]="square"
+                             stackItemSize="2x"
+                             class="oppo-square"></fa-icon>
+                    <fa-icon [icon]="dollarSign"
+                             [inverse]="true"
+                             stackItemSize="1x"></fa-icon>
+                  </fa-stack>
+                  <p class="card-title ml-2">OPPORTUNITIES</p>
+                </div>
+              </div>
+              <div class="card-body pr-2 pl-2">
+                <app-opportunity></app-opportunity>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header savings-card-header">
+                <div class="row">
+                  <fa-stack class="ml-2">
+                    <fa-icon [icon]="square"
+                             stackItemSize="2x"
+                             class="savings-square"></fa-icon>
+                    <fa-icon [icon]="cubes"
+                             [inverse]="true"
+                             stackItemSize="1x"></fa-icon>
+                  </fa-stack>
+                  <p class="card-title ml-2">SAVINGS ACCOUNTS</p>
+                </div>
+              </div>
+              <div class="card-body pr-2 pl-2" style="height: 220px !important;">
+                <app-savings-accounts></app-savings-accounts>
+              </div>
+              <div class="card-footer" style="background: #5e9fe8; height: 30px; line-height: 3px">
+                <div class="row">
+                  <div class="col-md-6">
+                    Total :
+                  </div>
+                  <div class="col-md-6 float-right" style="text-align: right">
+                    0.00
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header savings-card-header">
+                <div class="row">
+                  <fa-stack class="ml-2">
+                    <fa-icon [icon]="square"
+                             stackItemSize="2x"
+                             class="savings-square"></fa-icon>
+                    <fa-icon [icon]="cubes"
+                             [inverse]="true"
+                             stackItemSize="1x"></fa-icon>
+                  </fa-stack>
+                  <p class="card-title ml-2">DEBIT CARDS</p>
+                </div>
+              </div>
+              <div class="card-body pr-2 pl-2">
+                <app-debit-cards></app-debit-cards>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header savings-card-header">
+            <div class="row">
+              <fa-stack class="ml-2">
+                <fa-icon [icon]="square"
+                         stackItemSize="2x"
+                         class="savings-square"></fa-icon>
+                <fa-icon [icon]="cubes"
+                         [inverse]="true"
+                         stackItemSize="1x"></fa-icon>
+              </fa-stack>
+              <p class="card-title ml-2">CURRENT ACCOUNTS</p>
+            </div>
+          </div>
+          <div class="card-body pr-2 pl-2" style="height: 220px;">
+              <app-current-accounts></app-current-accounts>
+          </div>
+          <div class="card-footer" style="background: #5e9fe8; height: 30px; line-height: 3px">
+            <div class="row">
+              <div class="col-md-6">
+                Total :
+              </div>
+              <div class="col-md-6 float-right" style="text-align: right">
+                0.00
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header savings-card-header">
+            <div class="row">
+              <fa-stack class="ml-2">
+                <fa-icon [icon]="square"
+                         stackItemSize="2x"
+                         class="savings-square"></fa-icon>
+                <fa-icon [icon]="cubes"
+                         [inverse]="true"
+                         stackItemSize="1x"></fa-icon>
+              </fa-stack>
+              <p class="card-title ml-2">DIGITAL BANKING</p>
+            </div>
+          </div>
+          <div class="card-body pr-2 pl-2">
+            <app-digital-banking></app-digital-banking>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header savings-card-header">
+            <div class="row">
+              <fa-stack class="ml-2">
+                <fa-icon [icon]="square"
+                         stackItemSize="2x"
+                         class="savings-square"></fa-icon>
+                <fa-icon [icon]="cubes"
+                         [inverse]="true"
+                         stackItemSize="1x"></fa-icon>
+              </fa-stack>
+              <p class="card-title ml-2">CREDIT CARDS</p>
+            </div>
+          </div>
+          <div class="card-body pr-2 pl-2">
+            <app-credit-cards></app-credit-cards>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header savings-card-header">
+            <div class="row">
+              <fa-stack class="ml-2">
+                <fa-icon [icon]="square"
+                         stackItemSize="2x"
+                         class="savings-square"></fa-icon>
+                <fa-icon [icon]="cubes"
+                         [inverse]="true"
+                         stackItemSize="1x"></fa-icon>
+              </fa-stack>
+              <p class="card-title ml-2">FIXED DEPOSITS(0)</p>
+            </div>
+          </div>
+          <div class="card-body pr-2 pl-2" style="height: 220px;">
+            <app-fixed-deposits></app-fixed-deposits>
+          </div>
+          <div class="card-footer" style="background: #5e9fe8; height: 30px; line-height: 3px">
+            <div class="row">
+              <div class="col-md-6">
+                Total :
+              </div>
+              <div class="col-md-6 float-right" style="text-align: right">
+                0.00
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header savings-card-header">
+            <div class="row">
+              <fa-stack class="ml-2">
+                <fa-icon [icon]="square"
+                         stackItemSize="2x"
+                         class="savings-square"></fa-icon>
+                <fa-icon [icon]="cubes"
+                         [inverse]="true"
+                         stackItemSize="1x"></fa-icon>
+              </fa-stack>
+              <p class="card-title ml-2">LOANS(0)</p>
+            </div>
+          </div>
+          <div class="card-body pr-2 pl-2" style="height: 220px;">
+            <app-loans></app-loans>
+          </div>
+          <div class="card-footer" style="background: #5e9fe8; height: 30px; line-height: 3px">
+            <div class="row">
+              <div class="col-md-6">
+                Total :
+              </div>
+              <div class="col-md-6 float-right" style="text-align: right">
+                0.00
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header savings-card-header">
+            <div class="row">
+              <fa-stack class="ml-2">
+                <fa-icon [icon]="square"
+                         stackItemSize="2x"
+                         class="savings-square"></fa-icon>
+                <fa-icon [icon]="cubes"
+                         [inverse]="true"
+                         stackItemSize="1x"></fa-icon>
+              </fa-stack>
+              <p class="card-title ml-2">PREPAID CARDS(0)</p>
+            </div>
+          </div>
+          <div class="card-body pr-2 pl-2">
+            <app-prepaid-cards></app-prepaid-cards>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header savings-card-header">
+            <div class="row">
+              <fa-stack class="ml-2">
+                <fa-icon [icon]="square"
+                         stackItemSize="2x"
+                         class="savings-square"></fa-icon>
+                <fa-icon [icon]="cubes"
+                         [inverse]="true"
+                         stackItemSize="1x"></fa-icon>
+              </fa-stack>
+              <p class="card-title ml-2">BUSINESS RELATIONSHIPS</p>
+            </div>
+          </div>
+          <div class="card-body pr-2 pl-2">
+            <app-business-relationship></app-business-relationship>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-header savings-card-header">
+            <div class="row">
+                <fa-stack class="ml-2">
+                  <fa-icon [icon]="square"
+                           stackItemSize="2x"
+                           class="savings-square"></fa-icon>
+                  <fa-icon [icon]="cubes"
+                           [inverse]="true"
+                           stackItemSize="1x"></fa-icon>
+                </fa-stack>
+                <p class="card-title ml-2 pr-2">TRAVEL, TRADE FINANCE, REMITTANCES & OTHERS</p>
+              <span>
+                <button class="btn btn-sm btn-primary"
+                        type="button">
+              MAX REWARDS
+            </button>
+              </span>
+            </div>
+
+          </div>
+          <div class="card-body pr-2 pl-2">
+            <app-remittances></app-remittances>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button"
+            class="btn btn-sm btn-light"
+            data-dismiss="modal"
+            (click)="activeModal.close('Close Click')">
+      Cancel
+    </button>
+  </div>
+</div>

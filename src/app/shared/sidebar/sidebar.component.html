@@ -1,0 +1,157 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
+      <a class="nav-link" routerLink="/dashboard" routerLinkActive #dashboard="routerLinkActive">
+        <span class="menu-title">HOME</span>
+      </a>
+    </li>
+    <li class="nav-item"
+        [ngClass]="{'active' : view_customers.isActive || import_customers.isActive }">
+      <a class="nav-link" (click)="customerCollapsed = !customerCollapsed" [attr.aria-expanded]="customerCollapsed" aria-controls="customer">
+        <span class="menu-title">CUSTOMERS</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="customer" [ngbCollapse]="!customerCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="customer/view-customers"
+               routerLinkActive="active"
+               #view_customers="routerLinkActive">
+              View Customers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="customer/import-customers"
+               routerLinkActive="active"
+               #import_customers="routerLinkActive">
+              Import Customers
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item"
+        [ngClass]="{'active' : create_ticket.isActive || view_tickets.isActive || import_tickets.isActive }">
+      <a class="nav-link"
+         (click)="ticketCollapsed = !ticketCollapsed" [attr.aria-expanded]="ticketCollapsed" aria-controls="ticket">
+        <span class="menu-title">TICKETS</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="ticket" [ngbCollapse]="!ticketCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="ticket/create-ticket"
+               routerLinkActive="active"
+               #create_ticket="routerLinkActive">
+              Create Ticket
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="ticket/view-tickets"
+               routerLinkActive="active"
+               #view_tickets="routerLinkActive">
+              View Tickets
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="ticket/import-tickets"
+               routerLinkActive="active"
+               #import_tickets="routerLinkActive">
+              Import Tickets
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item"
+        [ngClass]="{'active' : create_account.isActive || view_accounts.isActive }">
+      <a class="nav-link"
+         (click)="accountCollapsed = !accountCollapsed" [attr.aria-expanded]="accountCollapsed" aria-controls="account">
+        <span class="menu-title">ACCOUNTS</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="account" [ngbCollapse]="!accountCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink=""
+               routerLinkActive=""
+               #create_account="routerLinkActive">
+              Create Account
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink=""
+               routerLinkActive=""
+               #view_accounts="routerLinkActive">
+              View Accounts
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': create_card.isActive || view_cards.isActive }">
+      <a class="nav-link"
+         (click)="cardCollapsed = !cardCollapsed" [attr.aria-expanded]="cardCollapsed"
+         aria-controls="card">
+        <span class="menu-title">CARDS</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="card" [ngbCollapse]="!cardCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink=""
+               routerLinkActive=""
+               #create_card="routerLinkActive">
+              Create Card
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink=""
+               routerLinkActive=""
+               #view_cards="routerLinkActive">
+              View Cards
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': create_loan.isActive || view_loans.isActive }">
+      <a class="nav-link"
+         (click)="loanCollapsed = !loanCollapsed" [attr.aria-expanded]="loanCollapsed"
+         aria-controls="loan">
+        <span class="menu-title">LOANS</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="loan" [ngbCollapse]="!loanCollapsed">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink=""
+               routerLinkActive=""
+               #create_loan="routerLinkActive">
+              Create Loan
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink=""
+               routerLinkActive=""
+               #view_loans="routerLinkActive">
+              View Loans
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

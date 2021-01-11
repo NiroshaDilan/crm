@@ -1,0 +1,59 @@
+
+.card-body {
+  height: 250px;
+  overflow: auto;
+  padding-top: 5px !important;
+}
+
+
+.card-header p {
+  margin-top: 5px !important;
+  font-family: Helvetica, Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: #534D64 !important;
+}
+
+.card-footer {
+  font-family: Helvetica, Arial, sans-serif !important;
+  color: white;
+}
+
+.profile-card-header {
+  border-top:1px solid #eb042d;
+  background:white;
+}
+
+.ticket-card-header {
+  border-top:1px solid #e6f262;
+  background:white;
+}
+
+.oppo-card-header {
+  border-top:1px solid #18e82e;
+  background:white;
+}
+
+.savings-card-header {
+  border-top:1px solid #2ae15e;
+  background:white;
+}
+
+.profile-square {
+  color: red;
+  border-radius: 5px;
+}
+
+.ticket-square {
+  color: #e6f262;
+  border-radius: 5px;
+}
+
+.oppo-square {
+  color: #18e82e;
+  border-radius: 5px;
+}
+
+.savings-square {
+  color: #2ae15e;
+  border-radius: 5px;
+}

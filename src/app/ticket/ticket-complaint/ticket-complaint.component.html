@@ -1,0 +1,135 @@
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-header">
+        <div class="row float-left">
+          <fa-stack class="ml-2">
+            <fa-icon [icon]="square"
+                     stackItemSize="2x"
+                     class="ticket-square"></fa-icon>
+            <fa-icon [icon]="bookOpen"
+                     [inverse]="true"
+                     stackItemSize="1x"></fa-icon>
+          </fa-stack>
+          <p class="card-title ml-2">TICKET COMPLAINT</p>
+        </div>
+
+        <div class="row float-right">
+          <button type="button"
+                  class="btn btn-sm btn-primary btn-fw" style="padding: 0;">
+            EDIT
+          </button>
+          <div ngbDropdown style="margin-right: 10px;">
+            <button class="btn btn-sm btn-primary"
+                    type="button" id="dropdownMenuIconButton6"
+                    ngbDropdownToggle>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownMenuIconButton6">
+              <a class="dropdown-item">DUPLICATE</a>
+              <a class="dropdown-item">DELETE</a>
+              <a class="dropdown-item">FIND DUPLICATES</a>
+              <a class="dropdown-item">CREATE TICKET</a>
+              <a class="dropdown-item">VIEW CHANNEL LOG</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body" style="padding: 20px;">
+
+        <div class="row">
+          <div class="col-md-4">
+            <h6><strong>Priority:</strong> Medium</h6>
+          </div>
+          <div class="col-md-4">
+            <h6><strong>Priority:</strong> Complaint</h6>
+          </div>
+          <div class="col-md-4">
+            <h6><strong>Priority:</strong> Reopen</h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body" style="padding: 20px;">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+
+  <div class="col-lg-8 grid-margin stretch-card pr-1">
+
+        <div class="card">
+          <div class="card-body p-0">
+
+            <ngb-tabset>
+              <ngb-tab title="OVERVIEW">
+                <ng-template ngbTabContent>
+                  <app-ticket-complaint-overview></app-ticket-complaint-overview>
+                </ng-template>
+              </ngb-tab>
+              <ngb-tab title="BPM PROCESS">
+                <ng-template ngbTabContent>
+                  <app-bpmprocess></app-bpmprocess>
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+
+          </div>
+        </div>
+  </div>
+  <div class="col-lg-4 grid-margin stretch-card pl-1">
+    <div class="card">
+      <div class="card-body p-0">
+
+        <ngb-tabset [justify]="justified">
+          <ngb-tab title="PLANNED ACTIVITIES">
+            <ng-template ngbTabContent>
+              <app-planned-activity></app-planned-activity>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="PAST ACTIVITIES">
+            <ng-template ngbTabContent>
+              <app-past-activity></app-past-activity>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body" style="padding: 20px;">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body" style="padding: 20px;">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
